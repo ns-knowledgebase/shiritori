@@ -140,7 +140,7 @@ export default function Home() {
           </div>
 
           <Button type="submit" color="primary" font="medium">
-            Start the Game
+            Start Game
           </Button>
         </form>
       ) : (
