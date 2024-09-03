@@ -16,6 +16,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 > **Note:** while the `dev` script is optimal for local development you should preview your Pages application as well (periodically or before deployments) in order to make sure that it can properly work in the Pages environment (for more details see the [`@cloudflare/next-on-pages` recommended workflow](https://github.com/cloudflare/next-on-pages/blob/05b6256/internal-packages/next-dev/README.md#recommended-workflow))
 
+## Author
+
+This source code is created and managed by one person.
+
+- Minagishl ([@minagishl](https://github.com/minagishl))
+
 ## How to use
 
 1. Add the names of the number of people who will participate in the game
