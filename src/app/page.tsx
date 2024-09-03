@@ -158,7 +158,7 @@ export default function Home() {
           <div className="flex w-full max-w-sm justify-center pt-6">
             {!hiddenName && (
               <div className="flex w-1/2 flex-col text-center">
-                <span className="px-2 text-sm font-medium text-gray-800 decoration-2">
+                <span className="px-2 text-sm font-medium text-gray-800 decoration-2 dark:text-white">
                   NEXT
                 </span>
                 <span className="px-2 text-2xl font-medium text-blue-600 decoration-2">
@@ -167,7 +167,7 @@ export default function Home() {
               </div>
             )}
             <div className="flex w-1/2 flex-col text-center">
-              <span className="px-2 text-sm font-medium text-gray-800 decoration-2">
+              <span className="px-2 text-sm font-medium text-gray-800 decoration-2 dark:text-white">
                 COUNT
               </span>
               <span className="px-2 text-2xl font-medium text-blue-600 decoration-2">
