@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.validate.enable": true,
+  "typescript.format.enable": true,
+  "css.lint.unknownAtRules": "ignore",
+  "files.exclude": {
+    "**/.next": true,
+    "**/.vercel": true,
+    "**/.wrangler": true,
+    "**/out": true
+  }
+}
