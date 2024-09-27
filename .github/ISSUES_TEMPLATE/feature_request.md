@@ -1,25 +1,25 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ""
-labels: enhancement
-assignees: ""
+name: 機能リクエスト
+about: このプロジェクトにアイデアを提案してください
+title: ''
+labels: 機能拡張
+assignees: ''
 ---
 
-### What problem does this feature solve?
+### この機能が解決する問題は何ですか？
 
-A clear and concise description of the problem or need.
+問題やニーズを明確かつ簡潔に説明してください
 
-### Describe the solution you'd like
+### 望む解決策の説明
 
-A clear and concise description of what you want to happen.
+実現したいことを明確かつ簡潔に説明してください
 
-<!-- The following items are not required, if you do not need them, please delete them -->
+<!-- 以下の項目は必須ではありませんので、不要な場合は削除してください -->
 
-### Describe alternatives you've considered
+### 考えた代替案の説明
 
-A clear and concise description of any alternative solutions or features you've considered.
+検討した他の解決策や機能について明確かつ簡潔に説明してください
 
-### Additional context
+### 追加情報
 
-Add any other context or screenshots about the feature request here.
+機能リクエストに関するその他の情報やスクリーンショットをここに追加してください

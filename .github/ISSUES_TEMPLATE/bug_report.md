@@ -1,33 +1,33 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: バグ報告
+about: 改善のためにバグを報告してください
 title: ''
-labels: bug
+labels: バグ
 assignees: ''
 ---
 
-### Describe the bug
+### バグの説明
 
-A clear and concise description of what the bug is.
+バグの内容を明確かつ簡潔に説明してください
 
-### To Reproduce
+### 再現手順
 
-Steps to reproduce the behavior:
+バグを再現する手順
 
-1. Go to '...'
-2. Click on '....'
-3. See error
+1. 「...」に移動
+2. 「...」をクリック
+3. エラーが発生
 
-### Expected behavior
+### 期待される動作
 
-A clear and concise description of what you expected to happen.
+期待していた動作を明確かつ簡潔に説明してください
 
-<!-- The following items are not required, if you do not need them, please delete them -->
+<!-- 以下の項目は必須ではありませんので、不要な場合は削除してください -->
 
-### Screenshots
+### スクリーンショット
 
-If applicable, add screenshots to help explain your problem.
+必要であれば、問題を説明するためのスクリーンショットを追加してください
 
-### Additional context
+### 追加情報
 
-Add any other context about the problem here.
+問題に関するその他の情報をここに追加してください
