@@ -1,11 +1,11 @@
-### Changes Made
+### 変更内容
 
-Clearly describe what changes were made in this pull request.
+このプルリクエストで行われた変更を明確に説明してください
 
-### Issues Resolved
+### 解決した問題
 
-Explain the issues or problems that this pull request solves.
+このプルリクエストが解決する問題や課題を説明してください
 
-### Additional Changes
+### 追加の変更
 
-Describe any new features or improvements that were added as part of this change.
+この変更の一環として追加された新機能や改善点を説明してください
