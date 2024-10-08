@@ -1,33 +1,28 @@
-# Shiritori
+# しりとり
 
-This application solves the problem of forgetting who answers next when playing Shiritori (Japanese game of Shiritori).
+しりとりをしていると、次に誰が答えるか忘れてしまう問題を解決するアプリです。
+また、カウント機能もあるので、新しい遊び方を見つけることもできます！
 
-It also has a counting function, so you can play in a new way!
+## はじめに
 
-## Getting Started
-
-First, run the development server:
+最初に開発サーバーを起動します
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) にアクセスして、アプリを利用できます。
 
-> **Note:** while the `dev` script is optimal for local development you should preview your Pages application as well (periodically or before deployments) in order to make sure that it can properly work in the Pages environment (for more details see the [`@cloudflare/next-on-pages` recommended workflow](https://github.com/cloudflare/next-on-pages/blob/05b6256/internal-packages/next-dev/README.md#recommended-workflow))
-
-## Author
-
-This source code is created and managed by one person.
+## 著者
 
 - Minagishl ([@minagishl](https://github.com/minagishl))
 
-## How to use
+## 使い方
 
-1. Add the names of the number of people who will participate in the game
+1. ゲームに参加する人数の名前を追加します
 
-2. Specify the time by moving the bar.
+2. バーを動かして時間を指定します。
 
-3. Click the “Start Game” button to display the timer and begin the game
+3. 「ゲームを開始」ボタンをクリックしてタイマーを表示し、ゲームを開始します
 
-> **Note:** Check the checkbox to hide the name of the next user to answer.
+> **Note:** 次に答えるユーザーの名前を非表示にするには、チェックボックスにチェックを入れます。
