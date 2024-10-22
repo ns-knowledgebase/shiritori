@@ -29,6 +29,11 @@ export default function Home() {
       return;
     }
 
+    if (names.some((name) => name === '')) {
+      alert('Please fill in all the fields.');
+      return;
+    }
+
     setIsStarted(true); // Set the game to started
 
     const interval = setInterval(() => {
