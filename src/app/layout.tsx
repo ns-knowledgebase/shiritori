@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Shiritori',
   description: 'A web application to help you manage Shiritori',
+  robots: {
+    index: false,
+  },
 };
 
 export const viewport: Viewport = {
