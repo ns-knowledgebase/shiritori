@@ -55,6 +55,12 @@ export default function Home() {
         setCurrentCount((prev) => prev + 1);
         setCurrentNumber((prev) => (prev === names.length ? 1 : prev + 1));
       }
+
+      // Add the Backspace event listener
+      if (e.key === 'Backspace' && isStarted && !isEnded) {
+        setCurrentCount((prev) => (prev === 1 ? names.length : prev - 1));
+        setCurrentNumber((prev) => (prev === 1 ? names.length : prev - 1));
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
