@@ -160,7 +160,7 @@ export default function Home() {
         </form>
       ) : (
         <>
-          {((current - 0) / (minutes - 0)) * 100 >= 100 ? (
+          {(current / minutes) * 100 >= 100 ? (
             <button
               className="relative flex w-full items-center justify-center"
               onClick={handleRestart}
