@@ -21,6 +21,9 @@ export default function Home() {
   const [minutes, setMinutes] = useState<number>(1);
   const [names, setNames] = useState<string[]>(['']);
 
+  // Add the interval variable
+  let interval: NodeJS.Timeout;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the form from submitting
 
@@ -36,14 +39,14 @@ export default function Home() {
 
     setIsStarted(true); // Set the game to started
 
-    const interval = setInterval(() => {
+    interval = setInterval(() => {
       setCurrent((prev) => {
-        if (prev > minutes) {
+        if (prev >= minutes) {
           clearInterval(interval);
           setIsEnded(true);
-          return 1;
+          return minutes;
         }
-        return prev + minutes / 60;
+        return prev + 1 / 60;
       });
     }, 1000);
   };
@@ -107,6 +110,7 @@ export default function Home() {
     setCurrent(0);
     setCurrentCount(1);
     setCurrentNumber(1);
+    clearInterval(interval);
   };
 
   const handleRedirect = () => {
@@ -156,7 +160,7 @@ export default function Home() {
         </form>
       ) : (
         <>
-          {current > 0.99 ? (
+          {(current / minutes) * 100 >= 100 ? (
             <button
               className="relative flex w-full items-center justify-center"
               onClick={handleRestart}

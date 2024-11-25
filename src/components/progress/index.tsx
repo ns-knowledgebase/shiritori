@@ -44,7 +44,7 @@ export default function Progress({
       {/* Percentage Text */}
       <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
         <span className="text-center text-2xl font-bold text-blue-600 dark:text-blue-600">
-          {value > 0.99 ? 'RESTART' : `${Math.round(percentage)}%`}
+          {percentage >= 100 ? 'RESTART' : `${Math.round(percentage)}%`}
         </span>
       </div>
     </div>
