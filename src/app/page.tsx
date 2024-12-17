@@ -90,6 +90,14 @@ export default function Home() {
 
   const addNameField = () => {
     setNames((prev) => [...prev, '']); // Add new empty name field
+    // Focus on the next input after state update
+    setTimeout(() => {
+      const inputs = document.querySelectorAll('input[type="text"]');
+      const lastInput = inputs[inputs.length - 1];
+      if (lastInput) {
+        (lastInput as HTMLInputElement).focus();
+      }
+    }, 0);
   };
 
   const clearNames = (index: number) => {
@@ -132,6 +140,7 @@ export default function Home() {
                 className="relative mr-2 w-full"
                 onChange={handleChange(index)}
                 clearName={() => clearNames(index)}
+                onEnter={addNameField}
               />
               {names.length === index + 1 ? (
                 <AddButton onClick={addNameField} />
