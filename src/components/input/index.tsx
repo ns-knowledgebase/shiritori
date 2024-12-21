@@ -5,6 +5,7 @@ interface InputProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   clearName: () => void;
   onEnter?: () => void;
+  onPaste?: (event: React.ClipboardEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
@@ -14,6 +15,7 @@ export default function Input({
   onChange,
   clearName,
   onEnter,
+  onPaste,
 }: InputProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -28,6 +30,7 @@ export default function Input({
         tabIndex={1}
         onChange={onChange}
         onKeyDown={handleKeyDown}
+        onPaste={onPaste}
         value={url}
         type="text"
         className="block w-full rounded-lg border border-gray-200 px-4 py-3 pr-16 text-sm outline-none focus:border-blue-500 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:border-neutral-700 dark:focus:ring-neutral-600"

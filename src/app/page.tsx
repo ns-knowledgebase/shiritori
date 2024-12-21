@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 // Components
@@ -88,15 +88,19 @@ export default function Home() {
     setHiddenName(e.target.checked); // Set the value of the checkbox
   };
 
+  const moveLast = () => {
+    const inputs = document.querySelectorAll('input[type="text"]');
+    const lastInput = inputs[inputs.length - 1];
+    if (lastInput) {
+      (lastInput as HTMLInputElement).focus();
+    }
+  };
+
   const addNameField = () => {
     setNames((prev) => [...prev, '']); // Add new empty name field
     // Focus on the next input after state update
     setTimeout(() => {
-      const inputs = document.querySelectorAll('input[type="text"]');
-      const lastInput = inputs[inputs.length - 1];
-      if (lastInput) {
-        (lastInput as HTMLInputElement).focus();
-      }
+      moveLast();
     }, 0);
   };
 
@@ -125,6 +129,16 @@ export default function Home() {
     router.push(process.env.NEXT_PUBLIC_REDIRECT_URL ?? '/');
   };
 
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const text = e.clipboardData.getData('text/plain');
+    const newNames = text.split('\n').filter((name) => name);
+    setNames(newNames);
+    setTimeout(() => {
+      moveLast();
+    }, 0);
+  };
+
   return (
     <Container>
       {!isStarted ? (
@@ -141,6 +155,7 @@ export default function Home() {
                 onChange={handleChange(index)}
                 clearName={() => clearNames(index)}
                 onEnter={addNameField}
+                onPaste={handlePaste}
               />
               {names.length === index + 1 ? (
                 <AddButton onClick={addNameField} />
