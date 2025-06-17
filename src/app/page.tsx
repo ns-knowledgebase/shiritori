@@ -157,8 +157,13 @@ export default function Home() {
                 onEnter={addNameField}
                 onPaste={handlePaste}
               />
-              {names.length === index + 1 && name !== '' ? (
+              {index === 0 ? (
                 <AddButton onClick={addNameField} />
+              ) : names.length === index + 1 ? (
+                <div className="flex items-center space-x-2">
+                  <RemoveButton onClick={() => removeNameField(index)} />
+                  <AddButton onClick={addNameField} />
+                </div>
               ) : (
                 <RemoveButton onClick={() => removeNameField(index)} />
               )}
